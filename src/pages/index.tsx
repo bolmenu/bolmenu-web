@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Button, Hero } from "../components";
+import { Hero, Header } from "../components";
 
 export default function Home() {
   return (
@@ -11,9 +11,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <Button onClick={() => console.log("click!")}>Test Button</Button>
-      </main>
+      <Hero />
+      <div className="container mx-auto">
+        <Header />
+      </div>
     </>
   );
 }
