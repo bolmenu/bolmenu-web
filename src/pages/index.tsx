@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Button, Hero } from "../components";
+import { Hero, Header } from "../components";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <Hero />
       <div className="container mx-auto">
-        <Button onClick={() => console.log("click!")}>Test Button</Button>
+        <Header />
       </div>
     </>
   );
