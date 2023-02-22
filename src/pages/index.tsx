@@ -12,9 +12,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <div className="container mx-auto">
-        <Header />
-      </div>
     </>
   );
 }

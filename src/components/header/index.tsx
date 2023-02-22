@@ -1,7 +1,7 @@
 import { Navigation } from "@/components";
 
 export default () => (
-  <header className="flex items-center justify-between mt-[50px]">
+  <header className="flex items-center justify-between">
     <a href="#">
       <img
         src="/assets/img/logo.webp"
