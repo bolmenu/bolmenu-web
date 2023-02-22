@@ -1,0 +1,6 @@
+export enum STYLE_TYPE {
+  COMMON = "COMMON",
+  DEFAULT = "DEFAULT",
+  PRIMARY = "PRIMARY",
+  SECONDARY = "SECONDARY",
+}

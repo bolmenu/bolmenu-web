@@ -1,4 +1,5 @@
 import { Header, Button } from "@/components";
+import { STYLE_TYPE } from "@/styles/theme/type";
 
 export default () => {
   return (
@@ -27,14 +28,30 @@ export default () => {
           </figure>
         </section>
         <section className="bg-[#fff] p-[60px] shadow-lg w-[100%] rounded-[10px] translate-y-[-100%]">
-          <h3 className="text-[#054f48] text-[43px] font-bold">Bizimle iletişime geçin</h3>
-          <p className="text-[#34807a] text-[17px] mt-[10px]">Hızlı bir şekilde formu doldurun, size ulaşalım.</p>
+          <h3 className="text-[#054f48] text-[43px] font-bold">
+            Bizimle iletişime geçin
+          </h3>
+          <p className="text-[#34807a] text-[17px] mt-[10px]">
+            Hızlı bir şekilde formu doldurun, size ulaşalım.
+          </p>
           <div className="flex columns-5 gap-[30px]">
-            <input className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]" type="text" />
-            <input className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]" type="text" />
-            <input className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]" type="text" />
-            <input className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]" type="text" />
-            <Button>Gönder</Button>
+            <input
+              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
+              type="text"
+            />
+            <input
+              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
+              type="text"
+            />
+            <input
+              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
+              type="text"
+            />
+            <input
+              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
+              type="text"
+            />
+            <Button type={STYLE_TYPE.SECONDARY}>Gönder</Button>
           </div>
         </section>
       </div>

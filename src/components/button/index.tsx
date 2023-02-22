@@ -1,18 +1,18 @@
-export enum BUTTON_TYPES {
-  PRIMARY = "PRIMARY",
-  SECONDARY = "SECONDARY",
-}
+import { ButtonStyle } from "@/styles/theme";
+import { STYLE_TYPE } from "@/styles/theme/type";
 
 interface ButtonProps {
   children: React.ReactNode;
-  type?: BUTTON_TYPES.PRIMARY | BUTTON_TYPES.SECONDARY;
+  type?: STYLE_TYPE.DEFAULT | STYLE_TYPE.PRIMARY | STYLE_TYPE.SECONDARY | null;
   onClick?: () => void;
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, type, onClick }: ButtonProps) => {
   return (
     <button
-      className="px-[40px] py-[15px] bg-[#FFCB45] hover:bg-[#FCC537] transition rounded-md text-base font-medium text-[#3A6451] w-full"
+      className={`${ButtonStyle[STYLE_TYPE.COMMON]} ${
+        type ? ButtonStyle[type] : ButtonStyle[STYLE_TYPE.DEFAULT]
+      }`}
       onClick={onClick}
     >
       {children}
