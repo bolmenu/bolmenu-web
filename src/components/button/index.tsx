@@ -1,20 +1,21 @@
-export enum BUTTON_TYPES {
-  PRIMARY = "PRIMARY",
-  SECONDARY = "SECONDARY",
-}
+import style from "./style";
 
-interface ButtonProps {
+import { ElementTypes } from "@/styles/theme/type";
+import { ButtonHTMLAttributes } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  type?: BUTTON_TYPES.PRIMARY | BUTTON_TYPES.SECONDARY;
-  onClick?: () => void;
+  theme?: ElementTypes;
+  className?: string;
 }
 
-const Button = ({ children, onClick }: ButtonProps) => {
+const Button = ({ children, theme, className, ...rest }: ButtonProps) => {
+  const classCombine = `${style[ElementTypes.Common]} ${
+    theme ? style[theme] : style[ElementTypes.Default]
+  } ${className}`;
+
   return (
-    <button
-      className="px-[40px] py-[15px] bg-[#FFCB45] hover:bg-[#FCC537] transition rounded-md text-base font-medium text-[#3A6451] w-full"
-      onClick={onClick}
-    >
+    <button className={classCombine} {...rest}>
       {children}
     </button>
   );

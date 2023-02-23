@@ -1,15 +1,22 @@
-import Link from "next/link";
+import style from "./style";
 
-interface LinkProps {
+import { ElementTypes } from "@/styles/theme/type";
+import Link, { LinkProps } from "next/link";
+
+interface ILinkProps extends LinkProps {
   children: React.ReactNode;
-  url: string;
+  theme?: ElementTypes;
+  className?: string;
 }
 
-export default ({ children, url }: LinkProps) => (
-  <Link
-    href={url}
-    className="text-[15px] text-[#fff] hover:text-[#ffcb45] transition"
-  >
-    {children}
-  </Link>
-);
+export default ({ children, theme, className, ...rest }: ILinkProps) => {
+  const classCombine = `${style[ElementTypes.Common]} ${
+    theme ? style[theme] : style[ElementTypes.Default]
+  } ${className}`;
+
+  return (
+    <Link className={classCombine} {...rest}>
+      {children}
+    </Link>
+  );
+};
