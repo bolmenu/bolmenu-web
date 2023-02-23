@@ -1,20 +1,21 @@
-import { ButtonStyle } from "@/styles/theme";
-import { STYLE_TYPE } from "@/styles/theme/type";
+import style from "./style";
 
-interface ButtonProps {
+import { ElementTypes } from "@/styles/theme/type";
+import { ButtonHTMLAttributes } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  type?: STYLE_TYPE.DEFAULT | STYLE_TYPE.PRIMARY | STYLE_TYPE.SECONDARY | null;
-  onClick?: () => void;
+  theme?: ElementTypes;
+  className?: string;
 }
 
-const Button = ({ children, type, onClick }: ButtonProps) => {
+const Button = ({ children, theme, className, ...rest }: ButtonProps) => {
+  const classCombine = `${style[ElementTypes.Common]} ${
+    theme ? style[theme] : style[ElementTypes.Default]
+  } ${className}`;
+
   return (
-    <button
-      className={`${ButtonStyle[STYLE_TYPE.COMMON]} ${
-        type ? ButtonStyle[type] : ButtonStyle[STYLE_TYPE.DEFAULT]
-      }`}
-      onClick={onClick}
-    >
+    <button className={classCombine} {...rest}>
       {children}
     </button>
   );
