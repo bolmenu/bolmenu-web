@@ -1,5 +1,5 @@
-import { Header, Button } from "@/components";
-import { STYLE_TYPE } from "@/styles/theme/type";
+import { Header, Button, Input } from "@/components";
+import { ElementTypes } from "@/styles/theme/type";
 
 export default () => {
   return (
@@ -34,24 +34,12 @@ export default () => {
           <p className="text-[#34807a] text-[17px] mt-[10px]">
             Hızlı bir şekilde formu doldurun, size ulaşalım.
           </p>
-          <div className="flex columns-5 gap-[30px]">
-            <input
-              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
-              type="text"
-            />
-            <input
-              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
-              type="text"
-            />
-            <input
-              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
-              type="text"
-            />
-            <input
-              className="border-[1px] border-[#cbe2e1] focus:border-[#34807a] transition outline-0 w-full px-[30px] py-[15px] rounded-[6px]"
-              type="text"
-            />
-            <Button type={STYLE_TYPE.SECONDARY}>Gönder</Button>
+          <div className="flex columns-5 gap-[30px] mt-[30px]">
+            <Input placeholder="Ad-Soyad" />
+            <Input placeholder="İşletme Adı" />
+            <Input placeholder="Telefon" />
+            <Input placeholder="Mail" />
+            <Button theme={ElementTypes.Secondary}>Gönder</Button>
           </div>
         </section>
       </div>
