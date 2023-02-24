@@ -6,6 +6,7 @@ const style = {
   [ElementTypes.Default]: "border-[#cbe2e1] focus:border-[#34807a] placeholder-[#cbe2e1] text-[#34807a]",
   [ElementTypes.Primary]: "",
   [ElementTypes.Secondary]: "",
+  [ElementTypes.Focus]: "border-[#34807a] focus:border-[#34807a] placeholder-[#cbe2e1] text-[#34807a]",
 };
 
 export default style;
