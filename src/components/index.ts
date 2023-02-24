@@ -4,5 +4,17 @@ import Navigation from "./nav";
 import Header from "./header";
 import Link from "./link";
 import Input from "./input";
+import Typography from "./typography";
 
-export { Button, Hero, Navigation, Header, Link, Input };
+import HeroContact from "./hero-contact";
+
+export {
+  Button,
+  Hero,
+  Navigation,
+  Header,
+  Link,
+  Input,
+  Typography,
+  HeroContact,
+};
