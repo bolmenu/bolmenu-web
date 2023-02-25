@@ -46,34 +46,37 @@ export default () => {
             icon={IconTypes.Person}
             onChange={formik.handleChange}
             value={formik.values.name}
-            error={formik.errors.name}
+            error={formik.touched.name && formik.errors.name}
             name="name"
           />
+
           <Input
             placeholder="İşletme Adı"
             icon={IconTypes.Building}
             onChange={formik.handleChange}
             value={formik.values.company}
-            error={formik.errors.company}
+            error={formik.touched.company && formik.errors.company}
             name="company"
           />
+
           <Input
             placeholder="Telefon"
             icon={IconTypes.Phone}
             onChange={formik.handleChange}
             value={formik.values.phone}
-            error={formik.errors.phone}
+            error={formik.touched.phone && formik.errors.phone}
             name="phone"
           />
-          
+
           <Input
             placeholder="Mail"
             icon={IconTypes.Envelope}
             onChange={formik.handleChange}
             value={formik.values.mail}
-            error={formik.errors.mail}
+            error={formik.touched.phone && formik.errors.mail}
             name="mail"
           />
+
           <Button type="submit" theme={ElementTypes.Secondary}>
             Gönder
           </Button>

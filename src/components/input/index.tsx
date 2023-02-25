@@ -1,20 +1,27 @@
 import React, { ChangeEventHandler, useState } from "react";
 import style from "./style";
 
-import { ElementTypes } from "@/styles/theme/type";
+import { ElementTypes, TypographyTypes } from "@/styles/theme/type";
 import { InputHTMLAttributes } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { Typography } from "..";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   theme?: ElementTypes;
   className?: string;
   icon?: IconDefinition;
-  error?: string;
+  error?: string | false | undefined;
 }
 
-const Input = ({ theme, className, icon, error, ...rest }: InputProps) => {
+const Input: React.FC<InputProps> = ({
+  theme,
+  className,
+  icon,
+  error,
+  ...rest
+}: InputProps) => {
   const [isFocus, setIsFocus] = useState(false);
 
   const classes = {
@@ -46,7 +53,7 @@ const Input = ({ theme, className, icon, error, ...rest }: InputProps) => {
           {...rest}
         />
       </div>
-      {error && <p>{error}</p>}
+      {error && <Typography theme={TypographyTypes.Error}>{error}</Typography>}
     </div>
   );
 };
