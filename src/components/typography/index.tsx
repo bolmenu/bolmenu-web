@@ -11,7 +11,7 @@ interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {
 
 const TsHeading = ({ theme, children, className }: HeadingProps) => {
   const classCombine = `${style[TypographyTypes.Default]} ${
-    theme ? style[theme] : style[TypographyTypes.P]
+    theme ? style[theme] : style[TypographyTypes.Default]
   } ${className ? className : ''}`;
 
   const Heading = ({ ...props }: HTMLAttributes<HTMLHeadingElement>) =>
