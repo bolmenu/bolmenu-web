@@ -9,6 +9,7 @@ const style = {
   [TypographyTypes.H5]: "text-[13px]",
   [TypographyTypes.H6]: "",
   [TypographyTypes.P]: "text-[17px]",
+  [TypographyTypes.Error]: "text-[13px] pl-[5px] pt-[5px] text-[#FF3B41] transition absolute",
 };
 
 export default style;
