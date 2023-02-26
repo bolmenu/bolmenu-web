@@ -4,7 +4,12 @@ import { ElementTypes, IconTypes, TypographyTypes } from "@/styles/theme/type";
 import { Input, Button, Typography } from "@/components";
 
 import { useFormik } from "formik";
-import { baseValidation, mailValidation } from "@/styles/theme/validation";
+import {
+  nameValidation,
+  companyValidation,
+  phoneValidation,
+  mailValidation,
+} from "@/styles/theme/validation";
 
 export default () => {
   const formik = useFormik({
@@ -18,9 +23,9 @@ export default () => {
       console.log("submit values: ", values);
     },
     validationSchema: yup.object({
-      name: baseValidation,
-      company: baseValidation,
-      phone: baseValidation,
+      name: nameValidation,
+      company: companyValidation,
+      phone: phoneValidation,
       mail: mailValidation,
     }),
   });
@@ -62,9 +67,22 @@ export default () => {
           <Input
             placeholder="Telefon"
             icon={IconTypes.Phone}
-            onChange={formik.handleChange}
+            onChange={(e: any) => {
+              const value = e.target.value;
+              const editedValue = value
+                .replaceAll(" ", "")
+                .replaceAll("_", "")
+                .replace("+90", "")
+                .replace("(", "")
+                .replace(")", "");
+
+              console.log("editedValue: ", editedValue);
+
+              formik.setFieldValue("phone", editedValue);
+            }}
             value={formik.values.phone}
             error={formik.touched.phone && formik.errors.phone}
+            mask="+\90 (999) 999 99 99"
             name="phone"
           />
 
