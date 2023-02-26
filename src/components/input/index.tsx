@@ -1,4 +1,5 @@
 import React, { ChangeEventHandler, useState } from "react";
+import InputMask from "react-input-mask-next";
 import style from "./style";
 
 import { ElementTypes, TypographyTypes } from "@/styles/theme/type";
@@ -13,6 +14,7 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   icon?: IconDefinition;
   error?: string | false | undefined;
+  mask?: string;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -20,6 +22,7 @@ const Input: React.FC<InputProps> = ({
   className,
   icon,
   error,
+  mask,
   ...rest
 }: InputProps) => {
   const [isFocus, setIsFocus] = useState(false);
@@ -36,7 +39,7 @@ const Input: React.FC<InputProps> = ({
   const classCombine = `${classes.common} ${classes.base} ${className} ${classes.iconBase}`;
 
   return (
-    <div>
+    <div className="relative">
       <div className="relative w-full flex items-center">
         {icon && (
           <FontAwesomeIcon
@@ -46,10 +49,11 @@ const Input: React.FC<InputProps> = ({
             }`}
           />
         )}
-        <input
+        <InputMask
+          mask={mask ? mask : ""}
+          className={classCombine}
           onFocus={() => setIsFocus(true)}
           onBlur={() => setIsFocus(false)}
-          className={classCombine}
           {...rest}
         />
       </div>
