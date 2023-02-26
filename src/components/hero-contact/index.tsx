@@ -4,7 +4,12 @@ import { ElementTypes, IconTypes, TypographyTypes } from "@/styles/theme/type";
 import { Input, Button, Typography } from "@/components";
 
 import { useFormik } from "formik";
-import { baseValidation, mailValidation } from "@/styles/theme/validation";
+import {
+  nameValidation,
+  companyValidation,
+  phoneValidation,
+  mailValidation,
+} from "@/styles/theme/validation";
 
 export default () => {
   const formik = useFormik({
@@ -18,9 +23,9 @@ export default () => {
       console.log("submit values: ", values);
     },
     validationSchema: yup.object({
-      name: baseValidation,
-      company: baseValidation,
-      phone: baseValidation,
+      name: nameValidation,
+      company: companyValidation,
+      phone: phoneValidation,
       mail: mailValidation,
     }),
   });
@@ -65,6 +70,7 @@ export default () => {
             onChange={formik.handleChange}
             value={formik.values.phone}
             error={formik.touched.phone && formik.errors.phone}
+            mask="+\90 999 999 99 99"
             name="phone"
           />
 
