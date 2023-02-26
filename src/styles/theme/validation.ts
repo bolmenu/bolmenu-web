@@ -1,12 +1,15 @@
 import * as yup from "yup";
 
+const phoneRegExp = /(5)[0-9][0-9]([0-9]){3}([0-9]){2}([0-9]){2}/;
+
 export const baseValidation = yup
   .string()
   .required("* Lütfen alanı boş bırakmayınız.");
 
 export const phoneValidation = yup
   .string()
-  .required("* Lütfen alanı boş bırakmayınız.");
+  .required("* Lütfen alanı boş bırakmayınız.")
+  .matches(phoneRegExp, "* Lütfen geçerli bir telefon numarası giriniz.");
 
 export const nameValidation = yup
   .string()

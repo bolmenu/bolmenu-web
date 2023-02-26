@@ -67,10 +67,22 @@ export default () => {
           <Input
             placeholder="Telefon"
             icon={IconTypes.Phone}
-            onChange={formik.handleChange}
+            onChange={(e: any) => {
+              const value = e.target.value;
+              const editedValue = value
+                .replaceAll(" ", "")
+                .replaceAll("_", "")
+                .replace("+90", "")
+                .replace("(", "")
+                .replace(")", "");
+
+              console.log("editedValue: ", editedValue);
+
+              formik.setFieldValue("phone", editedValue);
+            }}
             value={formik.values.phone}
             error={formik.touched.phone && formik.errors.phone}
-            mask="+\90 999 999 99 99"
+            mask="+\90 (999) 999 99 99"
             name="phone"
           />
 
