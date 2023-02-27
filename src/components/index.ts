@@ -7,6 +7,7 @@ import Input from "./input";
 import Typography from "./typography";
 
 import HeroContact from "./hero-contact";
+import FeatureBox from "./feature-box";
 
 export {
   Button,
@@ -17,4 +18,5 @@ export {
   Input,
   Typography,
   HeroContact,
+  FeatureBox,
 };

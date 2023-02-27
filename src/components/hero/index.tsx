@@ -3,10 +3,11 @@ import { TypographyTypes } from "@/styles/theme/type";
 
 export default () => {
   return (
-    <div className="top-0 left-0 z-[-1] bg-[url('/assets/img/hero-background.jpg')] bg-cover bg-center w-[100vw] h-[70vh] pt-[50px]">
+    <div className="relative pt-[50px]">
+      <div className="absolute top-0 left-0 z-[-1] bg-[url('/assets/img/hero-background.jpg')] bg-cover bg-center w-[100vw] h-[70vh]"></div>
       <div className="container mx-auto relative">
         <Header />
-        <section className="flex mt-[200px] gap-[30px]">
+        <section className="flex mt-[200px] gap-[30px] max-h-[calc(70vh_-_(200px_+_54px_+_50px))]">
           <article className="w-[50%]">
             <Typography theme={TypographyTypes.H1} className="text-[#ffcb45]">
               Menü oluşturmanın en kolay ve ucuz yolu

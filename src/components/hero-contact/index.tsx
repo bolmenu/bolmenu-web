@@ -31,7 +31,7 @@ export default () => {
   });
 
   return (
-    <section className="bg-[#fff] p-[60px] shadow-lg w-[100%] rounded-[10px] translate-y-[-100%]">
+    <section className="bg-[#fff] p-[60px] shadow-lg w-[100%] rounded-[10px] translate-y-[-50%]">
       <form onSubmit={formik.handleSubmit}>
         <Typography
           theme={TypographyTypes.H2}
