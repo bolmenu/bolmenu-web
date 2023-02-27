@@ -3,7 +3,14 @@ import {
   faBuilding,
   faPhone,
   faEnvelope,
+  faQrcode,
+  faPalette,
+  faCoins,
+  faSeedling,
+  faChartPie,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { faWordpress } from "@fortawesome/free-brands-svg-icons";
 
 export enum ElementTypes {
   Common = "COMMON",
@@ -30,4 +37,10 @@ export const IconTypes = {
   Building: faBuilding,
   Phone: faPhone,
   Envelope: faEnvelope,
+  QrCode: faQrcode,
+  Wordpress: faWordpress,
+  Design: faPalette,
+  Coin: faCoins,
+  Seedling: faSeedling,
+  Chart: faChartPie,
 };

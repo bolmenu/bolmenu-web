@@ -1,6 +1,7 @@
+import { IconTypes } from "@/styles/theme/type";
 import Head from "next/head";
 
-import { Hero, Header } from "../components";
+import { Hero, FeatureBox } from "../components";
 
 export default function Home() {
   return (
@@ -12,6 +13,40 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <div className="container mx-auto">
+        <div className="flex flex-wrap gap-[30px]">
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+          <FeatureBox
+            icon={IconTypes.QrCode}
+            title="Kolay Kullanım"
+            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+          />
+        </div>
+      </div>
     </>
   );
 }
