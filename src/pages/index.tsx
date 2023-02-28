@@ -14,36 +14,36 @@ export default function Home() {
       </Head>
       <Hero />
       <div className="container mx-auto">
-        <div className="flex flex-wrap gap-[30px]">
+        <div className="flex flex-wrap mb-[240px]">
           <FeatureBox
             icon={IconTypes.QrCode}
             title="Kolay Kullanım"
             detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
           />
           <FeatureBox
-            icon={IconTypes.QrCode}
-            title="Kolay Kullanım"
-            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+            icon={IconTypes.Wordpress}
+            title="Kolay Yönetim"
+            detail="WordPress alt yapısı ile menü içeriğinizi kolaylıkla yönetebilir ve değişiklik yapabilirsiniz."
           />
           <FeatureBox
-            icon={IconTypes.QrCode}
-            title="Kolay Kullanım"
-            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+            icon={IconTypes.Design}
+            title="Tasarım"
+            detail="Menünüzü kendinize özel logo, renk ve font seçenekleri ile kişiselleştirebilirsiniz."
           />
           <FeatureBox
-            icon={IconTypes.QrCode}
-            title="Kolay Kullanım"
-            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+            icon={IconTypes.Coin}
+            title="Düşük Maliyet"
+            detail="Menü değişimi, yenileme ve yeni menü gibi fiziki maliyetlere son."
           />
           <FeatureBox
-            icon={IconTypes.QrCode}
-            title="Kolay Kullanım"
-            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+            icon={IconTypes.Seedling}
+            title="Çevre Dostu"
+            detail="Kağıt ürünleri kullanmadan yeşili koruyoruz."
           />
           <FeatureBox
-            icon={IconTypes.QrCode}
-            title="Kolay Kullanım"
-            detail="Telefon kamerası ile QR kodu okutarak, kullanıcı dostu arayüzlü menüye hızlı ulaşabilirsiniz."
+            icon={IconTypes.Chart}
+            title="İstatistik"
+            detail="Müşterilerinizin ürün tercihlerinin analitik ve istatistik raporlarını inceleyin."
           />
         </div>
       </div>
