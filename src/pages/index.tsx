@@ -1,7 +1,7 @@
-import { IconTypes } from "@/styles/theme/type";
 import Head from "next/head";
 
-import { Hero, FeatureBox } from "../components";
+import { IconTypes, TypographyTypes } from "@/styles/theme/type";
+import { Hero, FeatureBox, Typography } from "../components";
 
 export default function Home() {
   return (
@@ -45,6 +45,39 @@ export default function Home() {
             title="İstatistik"
             detail="Müşterilerinizin ürün tercihlerinin analitik ve istatistik raporlarını inceleyin."
           />
+        </div>
+        <div className="flex gap-[100px] items-center mb-[300px]">
+          <figure className="w-[50%] relative">
+            <div className="w-[100%] h-[753px] bg-[#ffcb45] rounded-full flex items-center justify-center pb-[100px]">
+              <img
+                src="/assets/img/demo.webp"
+                srcSet="/assets/img/demo.webp 1x, /assets/img/demo@2x.webp 2x, /assets/img/demo@3x.webp 3x"
+                alt="Bolmenu Demo"
+              />
+            </div>
+          </figure>
+          <article className="w-[50%]">
+            <Typography theme={TypographyTypes.H5} className="text-[#ffcb45] mb-[30px]">
+              HAKKIMIZDA
+            </Typography>
+            <Typography theme={TypographyTypes.H2} className="text-[#054f48] mb-[15px]">
+              Bolmenu nedir?
+            </Typography>
+            <Typography theme={TypographyTypes.P} className="text-[#8d8d8d] mb-[15px] text-[21px]">
+              Bolmenu bir QR sistemi ile menüye ulaşabileceğiniz yazılım
+              sistemidir.
+            </Typography>
+            <Typography theme={TypographyTypes.P} className="text-[#8d8d8d] mb-[15px] text-[21px]">
+              Bolmenu ile menü içeriğinizi kolayca değiştirebilir, kendi logonuz
+              ve renkleriniz ile tasarımınızı kişiselleştirebilir ve kullanıcı
+              istatistiklerini takip edebilirsiniz.
+            </Typography>
+            <Typography theme={TypographyTypes.P} className="text-[#8d8d8d] mb-[15px] text-[21px]">
+              Menü yıpranması, fiyat değişiklikleri, menü yenileme vb. gibi
+              maliyetli işlemleri; hızlı bir şekilde maliyetsiz çözün. Ayrıca
+              kağıt israfının önüne geçerek doğayı koruyun.
+            </Typography>
+          </article>
         </div>
       </div>
     </>
