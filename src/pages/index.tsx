@@ -133,6 +133,26 @@ export default function Home() {
           </figure>
         </div>
       </div>
+      <section className="bg-[url('/assets/img/wp-background.jpg')] bg-cover bg-center px-[150px] py-[150px]">
+        <div className="container mx-auto">
+          <article className="w-[50%]">
+            <Typography
+              theme={TypographyTypes.H1}
+              className="text-[#ffcb45] mb-[15px]"
+            >
+              Hemen İletişime Geçin
+            </Typography>
+            <Typography
+              theme={TypographyTypes.P}
+              className="text-[#fff] mb-[30px] text-[21px]"
+            >
+              İnceleme sonrasında olumlu/olumsuz yorumlarınızı bize email
+              üzerinden iletebilirsiniz.
+            </Typography>
+            <Button theme={ElementTypes.Default}>İletişime Geçin</Button>
+          </article>
+        </div>
+      </section>
       {/* <section className="bg-[#054f48]/[.05] px-[100px] py-[100px]">
         <div className="container mx-auto">
           <div className="flex justify-center">
