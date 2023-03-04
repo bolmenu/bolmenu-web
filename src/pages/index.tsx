@@ -153,6 +153,18 @@ export default function Home() {
           </article>
         </div>
       </section>
+      <footer className="bg-[#f2f6f5]">
+        <div className="border-b-[1px] border-[#054f48]/[.1] py-[100px]">
+          <div className="container">
+            
+          </div>
+        </div>
+        <div>
+          <div className="container py-[50px]">
+
+          </div>
+        </div>
+      </footer>
       {/* <section className="bg-[#054f48]/[.05] px-[100px] py-[100px]">
         <div className="container mx-auto">
           <div className="flex justify-center">
