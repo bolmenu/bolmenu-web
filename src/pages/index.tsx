@@ -155,15 +155,23 @@ export default function Home() {
       </section>
       <footer className="bg-[#f2f6f5]">
         <div className="border-b-[1px] border-[#054f48]/[.1] py-[100px]">
-          <div className="container">
-            
+          <div className="container mx-auto">
+            <div className="flex">
+              <ul className="grid gap-[15px]">
+                <li>
+                  <Typography theme={TypographyTypes.H6} className="font-bold">Hakkımızda</Typography>
+                </li>
+                <li>
+                  <Typography theme={TypographyTypes.H6}>Biz kimiz?</Typography>
+                </li>
+                <li>
+                  <Typography theme={TypographyTypes.H6}>QR menü nedir?</Typography>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div>
-          <div className="container py-[50px]">
-
-          </div>
-        </div>
+        <div></div>
       </footer>
       {/* <section className="bg-[#054f48]/[.05] px-[100px] py-[100px]">
         <div className="container mx-auto">
