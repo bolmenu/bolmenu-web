@@ -156,12 +156,17 @@ export default function Home() {
       <footer className="bg-[#f2f6f5]">
         <div className="border-b-[1px] border-[#054f48]/[.1] py-[100px]">
           <div className="container mx-auto">
-            <div className="flex gap-[100px]">
-              <ul className="grid gap-[15px]">
+            <div className="flex gap-[100px] items-start">
+              <img
+                src="/assets/img/logo-colorful.webp"
+                srcSet="/assets/img/logo-colorful.webp 1x, /assets/img/logo-colorful@2x.webp 2x, /assets/img/logo-colorful@3x.webp 3x"
+                alt="Bolmenu"
+              />
+              <ul className="flex flex-col gap-[15px]">
                 <li>
-                  <Typography theme={TypographyTypes.H6} className="font-bold">
+                  <Link href="#" theme={ElementTypes.Secondary}>
                     Hakkımızda
-                  </Typography>
+                  </Link>
                 </li>
                 <li>
                   <Link href="#" theme={ElementTypes.Primary}>
@@ -174,11 +179,11 @@ export default function Home() {
                   </Link>
                 </li>
               </ul>
-              <ul className="grid gap-[15px]">
+              <ul className="flex flex-col gap-[15px]">
                 <li>
-                  <Typography theme={TypographyTypes.H6} className="font-bold">
+                  <Link href="#" theme={ElementTypes.Secondary}>
                     Özellikler
-                  </Typography>
+                  </Link>
                 </li>
                 <li>
                   <Link href="#" theme={ElementTypes.Primary}>
@@ -190,6 +195,25 @@ export default function Home() {
                     Yönetim
                   </Link>
                 </li>
+                <li>
+                  <Link href="#" theme={ElementTypes.Primary}>
+                    Tasarım
+                  </Link>
+                </li>
+              </ul>
+              <ul className="flex flex-col gap-[15px]">
+                <li>
+                  <Link href="#" theme={ElementTypes.Secondary}>
+                    Fiyatlar
+                  </Link>
+                </li>
+              </ul>
+              <ul className="flex flex-col gap-[15px]">
+                <li>
+                  <Link href="#" theme={ElementTypes.Secondary}>
+                    İletişim
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -197,8 +221,12 @@ export default function Home() {
         <div className="py-[50px]">
           <div className="container mx-auto">
             <div className="flex items-center justify-between">
-              <Typography theme={TypographyTypes.SMALL}>COPYRIGHT © 2023 BOLMENU</Typography>
-              <Typography theme={TypographyTypes.SMALL}>Site Design & Development by Yasin KALKAN</Typography>
+              <Typography theme={TypographyTypes.SMALL}>
+                COPYRIGHT © 2023 BOLMENU
+              </Typography>
+              <Typography theme={TypographyTypes.SMALL}>
+                Site Design & Development by Yasin KALKAN
+              </Typography>
             </div>
           </div>
         </div>
