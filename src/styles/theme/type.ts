@@ -30,6 +30,7 @@ export enum TypographyTypes {
   H5 = "h5",
   H6 = "h6",
   P = "p",
+  SMALL = "small",
 }
 
 export const IconTypes = {

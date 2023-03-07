@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { ElementTypes, IconTypes, TypographyTypes } from "@/styles/theme/type";
-import { Hero, FeatureBox, Typography, Button } from "../components";
+import { Hero, FeatureBox, Typography, Button, Link } from "../components";
 
 export default function Home() {
   return (
@@ -156,22 +156,52 @@ export default function Home() {
       <footer className="bg-[#f2f6f5]">
         <div className="border-b-[1px] border-[#054f48]/[.1] py-[100px]">
           <div className="container mx-auto">
-            <div className="flex">
+            <div className="flex gap-[100px]">
               <ul className="grid gap-[15px]">
                 <li>
-                  <Typography theme={TypographyTypes.H6} className="font-bold">Hakkımızda</Typography>
+                  <Typography theme={TypographyTypes.H6} className="font-bold">
+                    Hakkımızda
+                  </Typography>
                 </li>
                 <li>
-                  <Typography theme={TypographyTypes.H6}>Biz kimiz?</Typography>
+                  <Link href="#" theme={ElementTypes.Primary}>
+                    Biz kimiz?
+                  </Link>
                 </li>
                 <li>
-                  <Typography theme={TypographyTypes.H6}>QR menü nedir?</Typography>
+                  <Link href="#" theme={ElementTypes.Primary}>
+                    QR menü nedir?
+                  </Link>
+                </li>
+              </ul>
+              <ul className="grid gap-[15px]">
+                <li>
+                  <Typography theme={TypographyTypes.H6} className="font-bold">
+                    Özellikler
+                  </Typography>
+                </li>
+                <li>
+                  <Link href="#" theme={ElementTypes.Primary}>
+                    Kullanım
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" theme={ElementTypes.Primary}>
+                    Yönetim
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div></div>
+        <div className="py-[50px]">
+          <div className="container mx-auto">
+            <div className="flex items-center justify-between">
+              <Typography theme={TypographyTypes.SMALL}>COPYRIGHT © 2023 BOLMENU</Typography>
+              <Typography theme={TypographyTypes.SMALL}>Site Design & Development by Yasin KALKAN</Typography>
+            </div>
+          </div>
+        </div>
       </footer>
       {/* <section className="bg-[#054f48]/[.05] px-[100px] py-[100px]">
         <div className="container mx-auto">
