@@ -22,7 +22,7 @@ export default () => {
             </Typography>
           </article>
           <figure className="w-[50%] relative">
-            <div className="w-[100%] h-[753px] bg-[#ffcb45] rounded-full flex items-center justify-center pb-[100px]">
+            <div className="w-[100%] lg:h-[497px] xl:h-[625px] 2xl:h-[753px] bg-[#ffcb45] rounded-full flex items-center justify-center pb-[100px]">
               <img
                 src="/assets/img/demo.webp"
                 srcSet="/assets/img/demo.webp 1x, /assets/img/demo@2x.webp 2x, /assets/img/demo@3x.webp 3x"
