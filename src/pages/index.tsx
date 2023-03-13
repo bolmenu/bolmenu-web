@@ -48,7 +48,7 @@ export default function Home() {
         </div>
         <div className="flex gap-[100px] items-center mb-[300px]">
           <figure className="w-[50%] relative">
-            <div className="w-[100%] h-[753px] bg-[#ffcb45] rounded-full flex items-center justify-center pb-[100px]">
+            <div className="w-[100%] lg:h-[462px] xl:h-[590px] 2xl:h-[718px] bg-[#ffcb45] rounded-full flex items-center justify-center pb-[100px]">
               <img
                 src="/assets/img/demo.webp"
                 srcSet="/assets/img/demo.webp 1x, /assets/img/demo@2x.webp 2x, /assets/img/demo@3x.webp 3x"
