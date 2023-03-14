@@ -9,6 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { Typography } from "..";
 
+React.useLayoutEffect = React.useEffect;
+
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   theme?: ElementTypes;
   className?: string;
