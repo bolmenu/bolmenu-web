@@ -8,6 +8,7 @@ import {
   faCoins,
   faSeedling,
   faChartPie,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { faWordpress } from "@fortawesome/free-brands-svg-icons";
@@ -18,6 +19,7 @@ export enum ElementTypes {
   Primary = "PRIMARY",
   Secondary = "SECONDARY",
   Focus = "FOCUS",
+  Hamburger = "HAMBURGER",
 }
 
 export enum TypographyTypes {
@@ -44,4 +46,5 @@ export const IconTypes = {
   Coin: faCoins,
   Seedling: faSeedling,
   Chart: faChartPie,
+  Hamburger: faBars,
 };
