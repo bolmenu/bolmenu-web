@@ -6,6 +6,7 @@ const style = {
   [ElementTypes.Default]: "bg-[#fff] hover:bg-[#FCC537] text-[#3A6451]",
   [ElementTypes.Primary]: "bg-[#FFCB45] hover:bg-[#FCC537] text-[#3A6451]",
   [ElementTypes.Secondary]: "bg-[#3a6451] hover:bg-[#FCC537] text-[#fff]",
+  [ElementTypes.Hamburger]: "!px-[20px] bg-[#FFCB45] hover:bg-[#FCC537] text-[#3A6451]",
 };
 
 export default style;
